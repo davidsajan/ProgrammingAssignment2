@@ -1,3 +1,8 @@
+# This program is used to calculate the inverse if not previosly
+# calculated and use cache value if previously done. 
+
+# create a matrix based on the user input, preparation 
+# for calculating matrix/cache etc.
 makeCacheMatrix <- function(x = matrix()) {
         matInv <- NULL
         set <- function(y) {
@@ -13,7 +18,9 @@ makeCacheMatrix <- function(x = matrix()) {
              getMatInv = getMatInv)
 }
 
+# display the cache value or calculate the inverse of matrix
 cacheSolve <- function(x, ...) {
+        ## Return a matrix that is the inverse of 'x'
         matInv <- x$getMatInv()
         if (!is.null(matInv)) {
                 message("getting cached data")
